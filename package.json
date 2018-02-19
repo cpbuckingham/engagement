@@ -1,0 +1,43 @@
+{
+  "name": "Engagement Desk",
+  "version": "1.0.0",
+  "description": "helping to management engagements in the studio",
+  "main": "server.js",
+  "repository": "",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "NODE_ENV=test mocha --reporter dot",
+    "start": "node server.js",
+    "heroku-postbuild": "knex migrate:latest && knex seed:run",
+    "nibble": "eslint-nibble db/ migrations/ routes/ seeds/ views/ test/ server.js"
+  },
+  "engines": {
+    "node": "6.4.0"
+  },
+  "author": "cpbuckingham",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^0.8.7",
+    "body-parser": "^1.15.2",
+    "cheerio": "^0.22.0",
+    "cookie-parser": "^1.4.3",
+    "cookie-session": "^2.0.0-alpha.1",
+    "dotenv": "^4.0.0",
+    "ejs": "^2.5.2",
+    "eslint-nibble": "^3.1.2",
+    "express": "^4.14.0",
+    "knex": "^0.12.2",
+    "method-override": "^2.3.6",
+    "nodemailer": "^4.0.1",
+    "pg": "^6.1.0",
+    "request": "^2.79.0"
+  },
+  "devDependencies": {
+    "eslint": "^3.19.0",
+    "chai": "^3.5.0",
+    "mocha": "^3.1.0",
+    "supertest": "^2.0.0"
+  }
+}
